@@ -1,16 +1,14 @@
 public class Sach {
-    // Thuoc tinh (dong goi - private)
     private String maSach;
     private String tieuDe;
     private String tacGia;
     private int namXuatBan;
     private int soLuong;
 
-    // Constructor mac dinh
-    public Sach() {
-    }
+    // Constructor mặc định
+    public Sach() {}
 
-    // Constructor co tham so
+    // Constructor có tham số
     public Sach(String maSach, String tieuDe, String tacGia, int namXuatBan, int soLuong) {
         this.maSach = maSach;
         this.tieuDe = tieuDe;
@@ -19,48 +17,32 @@ public class Sach {
         this.soLuong = soLuong;
     }
 
-    // Getter & Setter (the hien tinh dong goi)
-    public String getMaSach() {
-        return maSach;
+    // Constructor sao chép
+    public Sach(Sach other) {
+        this.maSach = other.maSach;
+        this.tieuDe = other.tieuDe;
+        this.tacGia = other.tacGia;
+        this.namXuatBan = other.namXuatBan;
+        this.soLuong = other.soLuong;
     }
 
-    public void setMaSach(String maSach) {
-        this.maSach = maSach;
-    }
+    // Getter & Setter
+    public String getMaSach() { return maSach; }
+    public void setMaSach(String maSach) { this.maSach = maSach; }
 
-    public String getTieuDe() {
-        return tieuDe;
-    }
+    public String getTieuDe() { return tieuDe; }
+    public void setTieuDe(String tieuDe) { this.tieuDe = tieuDe; }
 
-    public void setTieuDe(String tieuDe) {
-        this.tieuDe = tieuDe;
-    }
+    public String getTacGia() { return tacGia; }
+    public void setTacGia(String tacGia) { this.tacGia = tacGia; }
 
-    public String getTacGia() {
-        return tacGia;
-    }
+    public int getNamXuatBan() { return namXuatBan; }
+    public void setNamXuatBan(int namXuatBan) { this.namXuatBan = namXuatBan; }
 
-    public void setTacGia(String tacGia) {
-        this.tacGia = tacGia;
-    }
+    public int getSoLuong() { return soLuong; }
+    public void setSoLuong(int soLuong) { this.soLuong = soLuong; }
 
-    public int getNamXuatBan() {
-        return namXuatBan;
-    }
-
-    public void setNamXuatBan(int namXuatBan) {
-        this.namXuatBan = namXuatBan;
-    }
-
-    public int getSoLuong() {
-        return soLuong;
-    }
-
-    public void setSoLuong(int soLuong) {
-        this.soLuong = soLuong;
-    }
-
-    // Phuong thuc hien thi thong tin sach
+    // Hiển thị thông tin
     public void hienThiThongTin() {
         System.out.println("Ma sach: " + maSach);
         System.out.println("Tieu de: " + tieuDe);
@@ -69,3 +51,4 @@ public class Sach {
         System.out.println("So luong: " + soLuong);
         System.out.println("---------------------------");
     }
+}
