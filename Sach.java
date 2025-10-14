@@ -1,17 +1,13 @@
-// Lớp Sach thể hiện thông tin về một cuốn sách
 class Sach {
-    // Thuộc tính (để private nhằm thể hiện tính đóng gói)
     private String maSach;
     private String tieuDe;
     private String tacGia;
     private int namXuatBan;
     private int soLuong;
 
-    // Constructor không tham số
     public Sach() {
     }
 
-    // Constructor đầy đủ tham số
     public Sach(String maSach, String tieuDe, String tacGia, int namXuatBan, int soLuong) {
         this.maSach = maSach;
         this.tieuDe = tieuDe;
@@ -20,7 +16,6 @@ class Sach {
         this.soLuong = soLuong;
     }
 
-    // Getter và Setter cho các thuộc tính (thể hiện tính đóng gói)
     public String getMaSach() {
         return maSach;
     }
@@ -61,7 +56,6 @@ class Sach {
         this.soLuong = soLuong;
     }
 
-    // Phương thức hiển thị thông tin
     public void hienThiThongTin() {
         System.out.println("Mã sách: " + maSach);
         System.out.println("Tiêu đề: " + tieuDe);
@@ -69,5 +63,13 @@ class Sach {
         System.out.println("Năm xuất bản: " + namXuatBan);
         System.out.println("Số lượng: " + soLuong);
         System.out.println("--------------------------");
+    }
+    @Override
+    public String toString() {
+        return "Mã sách: " + maSach +
+               "\nTiêu đề: " + tieuDe +
+               "\nTác giả: " + tacGia +
+               "\nNăm xuất bản: " + namXuatBan +
+               "\nSố lượng: " + soLuong;
     }
 }
