@@ -1,21 +1,15 @@
 public class Test {
     public static void main(String[] args) {
-        // Tao doi tuong bang constructor co tham so
-        Sach sach1 = new Sach("S001", "Lap trinh Java", "Nguyen Van A", 2023, 10);
-        Sach sach2 = new Sach("S002", "Cau truc du lieu va giai thuat", "Tran Thi B", 2022, 5);
+        Sach sach1 = new Sach("B001", "Lập trình Java", "Nguyễn Văn A", 2021, 5);
 
-        // Tao doi tuong bang constructor mac dinh + setter
-        Sach sach3 = new Sach();
-        sach3.setMaSach("S003");
-        sach3.setTieuDe("Hoc may co ban");
-        sach3.setTacGia("Le Van C");
-        sach3.setNamXuatBan(2021);
-        sach3.setSoLuong(7);
+        Sach sach2 = new Sach();
+        sach2.setMaSach("B002");
+        sach2.setTieuDe("Cấu trúc dữ liệu");
+        sach2.setTacGia("Trần Thị B");
+        sach2.setNamXuatBan(2019);
+        sach2.setSoLuong(3);
 
-        // Hien thi thong tin sach
-        System.out.println("===== DANH SACH SACH =====");
         sach1.hienThiThongTin();
         sach2.hienThiThongTin();
-        sach3.hienThiThongTin();
     }
 }

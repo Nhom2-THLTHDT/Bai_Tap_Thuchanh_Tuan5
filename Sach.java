@@ -1,16 +1,13 @@
-public class Sach {
-    // Thuoc tinh (dong goi - private)
+class Sach {
     private String maSach;
     private String tieuDe;
     private String tacGia;
     private int namXuatBan;
     private int soLuong;
 
-    // Constructor mac dinh
     public Sach() {
     }
 
-    // Constructor co tham so
     public Sach(String maSach, String tieuDe, String tacGia, int namXuatBan, int soLuong) {
         this.maSach = maSach;
         this.tieuDe = tieuDe;
@@ -19,7 +16,6 @@ public class Sach {
         this.soLuong = soLuong;
     }
 
-    // Getter & Setter (the hien tinh dong goi)
     public String getMaSach() {
         return maSach;
     }
@@ -60,12 +56,20 @@ public class Sach {
         this.soLuong = soLuong;
     }
 
-    // Phuong thuc hien thi thong tin sach
     public void hienThiThongTin() {
-        System.out.println("Ma sach: " + maSach);
-        System.out.println("Tieu de: " + tieuDe);
-        System.out.println("Tac gia: " + tacGia);
-        System.out.println("Nam xuat ban: " + namXuatBan);
-        System.out.println("So luong: " + soLuong);
-        System.out.println("---------------------------");
+        System.out.println("Mã sách: " + maSach);
+        System.out.println("Tiêu đề: " + tieuDe);
+        System.out.println("Tác giả: " + tacGia);
+        System.out.println("Năm xuất bản: " + namXuatBan);
+        System.out.println("Số lượng: " + soLuong);
+        System.out.println("--------------------------");
     }
+    @Override
+    public String toString() {
+        return "Mã sách: " + maSach +
+               "\nTiêu đề: " + tieuDe +
+               "\nTác giả: " + tacGia +
+               "\nNăm xuất bản: " + namXuatBan +
+               "\nSố lượng: " + soLuong;
+    }
+}
